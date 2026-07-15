@@ -16,8 +16,6 @@ import { ThemeProvider } from '../components/ThemeProvider';
 const inter = Inter({ subsets: ['latin'] });
 
 // 动态生成 metadata，支持配置更新后的标题变化
-// 1. Update your generateMetadata function to include robots configurations natively
-
 export async function generateMetadata(): Promise<Metadata> {
   let siteName = process.env.SITE_NAME || 'MoonTV';
   if (
@@ -32,11 +30,6 @@ export async function generateMetadata(): Promise<Metadata> {
     title: siteName,
     description: '影视聚合',
     manifest: '/manifest.json',
-    // Add these lines below to block all search engine crawlers natively
-    robots: {
-      index: false,
-      follow: false,
-    },
   };
 }
 
@@ -109,7 +102,6 @@ export default async function RootLayout({
             __html: `window.RUNTIME_CONFIG = ${JSON.stringify(runtimeConfig)};`,
           }}
         />
-
       </head>
       <body
         className={`${inter.className} min-h-screen bg-white text-gray-900 dark:bg-black dark:text-gray-200`}
