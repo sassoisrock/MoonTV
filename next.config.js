@@ -10,12 +10,12 @@ const nextConfig = {
   swcMinify: true,
 
 // Uncoment to add domain whitelist
-
   images: {
     unoptimized: true,
     domains: [
       'image.tmdb.org',     // TMDB posters
       'img9.doubanio.com',  // Douban posters
+      'img3.doubanio.com',  // Douban posters (your screenshot shows this)
     ],
   },
 
