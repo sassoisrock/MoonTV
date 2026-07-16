@@ -9,13 +9,18 @@ const nextConfig = {
   reactStrictMode: false,
   swcMinify: true,
 
-// Uncoment to add domain whitelist
-
+  // Uncoment to add domain whitelist
   images: {
     unoptimized: true,
-    domains: [
-      'image.tmdb.org',     // TMDB posters
-      'img9.doubanio.com',  // Douban posters
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+      {
+        protocol: 'http',
+        hostname: '**',
+      },
     ],
   },
 
