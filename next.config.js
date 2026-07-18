@@ -16,6 +16,7 @@ const nextConfig = {
       'image.tmdb.org',     // TMDB posters
       'img9.doubanio.com',  // Douban posters
       'img3.doubanio.com',  // Douban posters (your screenshot shows this)
+      'images.weserv.nl',   // For Images proxy
     ],
   },
 
